@@ -49,7 +49,7 @@ def make_char_dict(filename):
     INPUT: string
     OUTPUT: dictionary (string => list)
 
-    Given a csv containing, you would like to create a dictionary with keys
+    Given a file containing, you would like to create a dictionary with keys
     of single characters. The value is a list of all the line numbers which
     start with that letter. The first line should have line number 1.
     Characters which never are the first letter of a line do not need to be
@@ -81,7 +81,7 @@ def pandas_only_given_state(df, state):
 
     Return a new pandas DataFrame which contains the entries for the given
     state. Only include these columns:
-        Neighborhood, City, 2011-01, 2014-01
+        Neighborhood, City, med_2011, med_2014
     '''
     pass
 
@@ -92,10 +92,12 @@ def pandas_max_rent(df):
 
     Return a new pandas DataFrame which contains every city and the highest
     median rent from that city for 2011 and 2014.
-    Your DataFrame should contain these columns:
-        City, State, 2011-01, 2014-01
 
-    Hint: use reset_index after you get the max.
+    Note that city names are not unique and you need to use the state as well
+    so that Portland, ME and Portland, OR are recognized as different.
+
+    Your DataFrame should contain these columns:
+        City, State, med_2011, med_2014
     '''
     pass
 
@@ -109,8 +111,8 @@ def pandas_max_rent(df):
 #
 # There are two tables in the database with these columns:
 # (this is the same data that you dealt with in the pandas questions)
-#     rent: Neighborhood, City, State, 2011-01, 2014-01
-#     buy:  Neighborhood, City, State, 2011-01, 2014-01
+#     rent: Neighborhood, City, State, med_2011, med_2014
+#     buy:  Neighborhood, City, State, med_2011, med_2014
 # The values in the date columns are integers corresponding to the price on
 # that date.
 
@@ -122,7 +124,7 @@ def sql_count_neighborhoods():
     Return a SQL query that gives the number of neighborhoods in each city
     according to the rent table. Keep in mind that city names are not always
     unique unless you include the state as well, so your result should have
-    these columns: city, state, cnt
+    these columns (though you do not need to name them): city, state, cnt
     '''
     pass
 
@@ -143,7 +145,7 @@ def sql_rent_and_buy():
 
     Return a SQL query that gives the rent price and buying price for 2014 for
     all the neighborhoods in San Francisco.
-    Your result should have these columns:
-        neighborhood, rent, buy
+    Your result should have these columns (though you do not need to name
+    them): neighborhood, rent, buy
     '''
     pass
