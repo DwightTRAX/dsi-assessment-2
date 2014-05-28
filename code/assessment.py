@@ -62,7 +62,7 @@ def make_char_dict(filename):
 # For each of these, you will be dealing with a DataFrame which contains median
 # rental prices in the US by neighborhood. The DataFrame will have these
 # columns:
-# Neighborhood, City, State, 2011-01, 2014-01
+# Neighborhood, City, State, med_2011, med_2014
 
 def pandas_add_increase_column(df):
     '''
