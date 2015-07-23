@@ -49,11 +49,11 @@ def make_char_dict(filename):
     INPUT: string
     OUTPUT: dictionary (string => list)
 
-    Given a file containing, you would like to create a dictionary with keys
-    of single characters. The value is a list of all the line numbers which
-    start with that letter. The first line should have line number 1.
-    Characters which never are the first letter of a line do not need to be
-    included in your dictionary.
+    Given a file containing rows of text, create a dictionary whose keys
+    are single characters. The value associated with each key is a list of all
+    the line numbers which start with that letter. The first line should have
+    line number 1.  Characters which never are the first letter of a line do
+    not need to be included in your dictionary.
     '''
     pass
 
@@ -69,7 +69,7 @@ def pandas_add_increase_column(df):
     INPUT: DataFrame
     OUTPUT: None
 
-    Add a column to the DataFrame called 'Increase' which contains the 
+    Add a column to the DataFrame called 'Increase' which contains the
     amount that the median rent increased by from 2011 to 2014.
     '''
     pass
