@@ -76,7 +76,7 @@ def pandas_add_increase_column(df):
 
 def pandas_only_given_state(df, state):
     '''
-    INPUT: DataFrame, string, string
+    INPUT: DataFrame, string
     OUTPUT: DataFrame
 
     Return a new pandas DataFrame which contains the entries for the given
