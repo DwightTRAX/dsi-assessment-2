@@ -20,6 +20,6 @@ We recommend skimming over all the questions and solving the ones that you are m
 
 You can run the test with this command from the root directory:
 
-    make test
+    python test/unittests.py
 
 Good luck!
