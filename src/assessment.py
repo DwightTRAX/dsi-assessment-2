@@ -1,8 +1,9 @@
 ## Fill each each function stub according to the docstring.
-## Run the tests with this command: "make test"
+## To run the unit tests: Make sure you are in the root dir:assessment-2 Then run the tests with this command: "make test"
 
 import numpy as np
 import pandas as pd
+
 
 def max_lists(list1, list2):
     '''
@@ -13,6 +14,7 @@ def max_lists(list1, list2):
     maximum element of each list for every index.
     '''
     pass
+
 
 def get_diagonal(mat):
     '''
@@ -33,6 +35,7 @@ def get_diagonal(mat):
     '''
     pass
 
+
 def merge_dictionaries(d1, d2):
     '''
     INPUT: dictionary, dictionary
@@ -43,6 +46,7 @@ def merge_dictionaries(d1, d2):
     be the sum of the two values.
     '''
     pass
+
 
 def make_char_dict(filename):
     '''
@@ -74,6 +78,7 @@ def pandas_add_increase_column(df):
     '''
     pass
 
+
 def pandas_only_given_state(df, state):
     '''
     INPUT: DataFrame, string
@@ -84,6 +89,7 @@ def pandas_only_given_state(df, state):
         Neighborhood, City, med_2011, med_2014
     '''
     pass
+
 
 def pandas_max_rent(df):
     '''
@@ -128,6 +134,7 @@ def sql_count_neighborhoods():
     '''
     pass
 
+
 def sql_highest_rent_increase():
     '''
     INPUT: None
@@ -137,6 +144,7 @@ def sql_highest_rent_increase():
     highest rent increase.
     '''
     pass
+
 
 def sql_rent_and_buy():
     '''

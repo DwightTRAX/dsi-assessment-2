@@ -8,9 +8,9 @@ Welcome to the second week of Zipfian!
 
 ## Assignment
 
-The goal of this assignment is to fill in each function stub in `assessment.py` according to its docstring and make the associated test pass.
+The goal of this assignment is to fill in each function stub in `assessment.py` according to its docstring and make the associated test pass. The repository structure is below for reference. `assessment.py` is under `src` directory.
 
-There are 10 questions over these topics in this order:
+There are 10 questions in `assessment.py` over these topics in this order:
 
 * general Python (4 questions)
 * pandas (3 questions)
@@ -18,8 +18,30 @@ There are 10 questions over these topics in this order:
 
 We recommend skimming over all the questions and solving the ones that you are most confident about first.
 
-You can run the test with this command from the root directory:
+All the questions in this assessment can be tested using the unit tests. You can run the tests with this command from the root directory (assessment-2/):
 
-    python test/unittests.py
+    `make test`
+
+## Repository Structure
+
+The repository has the following folder structure:
+
+        assessment-2
+        ├── Makefile
+        ├── README.md
+        ├── src
+        │   ├── __init__.py
+        │   ├── assessment.py
+        ├── data
+        │   ├── people.txt
+        │   ├── housing.sql
+        |   |-- buy.csv
+        |   |-- rent.csv
+        ├── test
+            ├── __init__.py
+            └── unittests.py
+
+
+* At the end of 60 minutes, don't forget to submit a pull request.
 
 Good luck!
