@@ -22,7 +22,7 @@ All the questions in this assessment can be tested using the unit tests. You can
 
     `make test`
 
-If you do not have `unittest2` on your computer, you will see an ImportError. Do a `pip install unittest2` and then rerun the tests. 
+If you do not have `unittest2` on your computer, you will see an ImportError. Do a `pip install unittest2` and then rerun the tests.
 
 ## Repository Structure
 
@@ -45,5 +45,7 @@ The repository has the following folder structure:
 
 
 * At the end of 60 minutes, don't forget to submit a pull request.
+
+**Feel free to use any online resources like python documentation and tutorials, your notes, readings and exercises.**
 
 Good luck!
