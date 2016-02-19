@@ -22,6 +22,8 @@ All the questions in this assessment can be tested using the unit tests. You can
 
     `make test`
 
+If you do not have `unittest2` on your computer, you will see an ImportError. Do a `pip install unittest2` and then rerun the tests. 
+
 ## Repository Structure
 
 The repository has the following folder structure:
