@@ -18,11 +18,14 @@ There are 10 questions in `assessment.py` over these topics in this order:
 
 We recommend skimming over all the questions and solving the ones that you are most confident about first.
 
+## Running Unit Tests
+
 All the questions in this assessment can be tested using the unit tests. You can run the tests with this command from the root directory (assessment-2/):
+        `make test`
 
-    `make test`
-
-If you do not have `unittest2` on your computer, you will see an ImportError. Do a `pip install unittest2` and then rerun the tests.
+If you do not unittest2 or py.test, you may see errors. Run the following commands in case you see errors related to these:
+        `pip install unittest2`
+        `pip install pytest`
 
 ## Repository Structure
 
