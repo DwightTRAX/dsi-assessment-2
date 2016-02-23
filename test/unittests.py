@@ -2,7 +2,7 @@
 Unit tests for DSI Assessment 2.
 Usage: from main assessment directory: make test
 '''
-import unittest2 as unittest
+import unittest as unittest
 import numpy as np
 import pandas as pd
 import sqlite3 as sql
