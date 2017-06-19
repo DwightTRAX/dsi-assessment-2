@@ -1,6 +1,6 @@
 # Week 2 Assessment
 
-Welcome to the second week of Zipfian!
+Welcome to the second week of the Galvanize Data Science Immersive!
 
 * Time: 60 minutes
 * Open book
