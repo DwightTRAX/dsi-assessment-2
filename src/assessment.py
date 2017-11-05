@@ -1,5 +1,6 @@
 ## Fill each each function stub according to the docstring.
-## To run the unit tests: Make sure you are in the root dir:assessment-2 Then run the tests with this command: "make test"
+## To run the unit tests: Make sure you are in the root dir:assessment-2 
+## Then run the tests with this command: "make test"
 
 import numpy as np
 import pandas as pd
