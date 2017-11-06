@@ -6,6 +6,12 @@ Welcome to the second week of the Galvanize Data Science Immersive!
 * Open book
 * Individual
 
+## Python version
+Take this assessment in **Python 3**.  To check which version of Python is installed natively, type `python --version` in the terminal.  If it's Python 2, activate the Python 3 environment you made earlier in the course:  
+```
+$ source activate py3
+```
+
 ## Assignment
 
 The goal of this assignment is to fill in each function stub in `assessment.py` according to its docstring and make the associated test pass. The repository structure is below for reference. `assessment.py` is under `src` directory.
@@ -18,10 +24,7 @@ There are 10 questions in `assessment.py` over these topics in this order:
 
 We recommend skimming over all the questions and solving the ones that you are most confident about first.
 
- * **Running Unit Tests**
-
- * Needs **Python2.7 or greater**    
-     * you can check your python version by running this: `python -V`
+**Running Unit Tests**
 
  * You can run the tests with this command from the root directory (assessment-2/):    
 
@@ -54,7 +57,7 @@ The repository has the following folder structure:
             └── unittests.py
 
 
-* At the end of 60 minutes, don't forget to submit a pull request.
+* At the end of 60 minutes, don't forget to `add`, `commit` and `push` followed by submitting a pull request.
 
 **Feel free to use any online resources like python documentation and tutorials, your notes, readings and exercises.**
 
