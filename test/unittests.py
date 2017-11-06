@@ -9,7 +9,7 @@ import sqlite3 as sql
 from src import assessment as a
 
 
-def run_sql_query(command, db='data/housing.sql'):
+def run_sql_query(command, db='data/housing.sqlite'):
     if not command:
         return []
     con = sql.connect(db)
