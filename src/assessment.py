@@ -113,7 +113,7 @@ def pandas_max_rent(df):
 # SQL statement which answers the question.
 # For example:
 #    return '''SELECT * FROM rent;'''
-# You may want to run "sqlite3 data/housing.sql" in the command line to test
+# You may want to run "sqlite3 data/housing.sqlite" in the command line to test
 # out your queries if the test is failing.
 #
 # There are two tables in the database with these columns:
