@@ -35,7 +35,8 @@ We recommend skimming over all the questions and solving the ones that you are m
     `pip install pytest`     
 
  * `.` refers to passing test, `E` is an error in the code and `F` is a failure. So something that looks like this: `....EFFFFFF` means 4 tests passed, one has an error and 6-11 fail.
- * It can be helpful to press enter a bunch of times between each time you run the test so that it's easy to find the beginning of your most recent results.    
+ 
+ * It may be helpful to use `less` to page through your test results: `make test | less`. You can browse through your test results one page at a time using the space bar. Press `q` to exit `less`.
 
 ## Repository Structure
 
