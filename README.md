@@ -28,7 +28,11 @@ We recommend skimming over all the questions and solving the ones that you are m
 
  * You can run the tests with this command from the root directory (assessment-2/):    
 
-    `make test`
+    `py.test test/unittests.py`
+
+ * You can run a single test using the `-k` flag and the function name. For example,
+
+    `py.test -k max_lists test/unittests.py`
 
  * If you do not have py.test, you may see Import errors. Run the following command in case you see such errors:    
 
