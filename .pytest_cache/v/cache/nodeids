@@ -1,0 +1,12 @@
+[
+  "test/unittests.py::TestAssessment2::test_get_diagonal",
+  "test/unittests.py::TestAssessment2::test_make_char_dict",
+  "test/unittests.py::TestAssessment2::test_max_lists",
+  "test/unittests.py::TestAssessment2::test_merge_dictionaries",
+  "test/unittests.py::TestAssessment2::test_pandas_add_increase_column",
+  "test/unittests.py::TestAssessment2::test_pandas_max_rent",
+  "test/unittests.py::TestAssessment2::test_pandas_only_given_state",
+  "test/unittests.py::TestAssessment2::test_sql_count_neighborhoods",
+  "test/unittests.py::TestAssessment2::test_sql_highest_rent_increase",
+  "test/unittests.py::TestAssessment2::test_sql_rent_and_buy"
+]

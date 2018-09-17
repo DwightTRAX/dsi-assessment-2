@@ -1,0 +1,6 @@
+{
+  "test/unittests.py::TestAssessment2::test_get_diagonal": true,
+  "test/unittests.py::TestAssessment2::test_make_char_dict": true,
+  "test/unittests.py::TestAssessment2::test_merge_dictionaries": true,
+  "test/unittests.py::TestAssessment2::test_pandas_max_rent": true
+}

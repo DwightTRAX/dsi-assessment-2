@@ -1,9 +1,10 @@
 ## Fill each each function stub according to the docstring.
-## To run the unit tests: Make sure you are in the root dir:assessment-2 
+## To run the unit tests: Make sure you are in the root dir:assessment-2
 ## Then run the tests with this command: "make test"
 
 import numpy as np
 import pandas as pd
+from collections import Counter
 
 
 def max_lists(list1, list2):
@@ -14,7 +15,11 @@ def max_lists(list1, list2):
     list1 and list2 have the same length. Return a list which contains the
     maximum element of each list for every index.
     '''
-    pass
+    result = []
+    for i in range(len(list1)):
+        result.append(max(list1[i],list2[i]))
+    return result
+
 
 
 def get_diagonal(mat):
@@ -34,7 +39,11 @@ def get_diagonal(mat):
 
     You may assume that the matrix is nonempty.
     '''
-    pass
+    l = min(len(mat),len(mat[0]))
+    result = []
+    for i in range(l):
+        result.append(mat[i][i])
+    return result
 
 
 def merge_dictionaries(d1, d2):
@@ -46,7 +55,8 @@ def merge_dictionaries(d1, d2):
     their associated values. If a key is in both dictionaries, the value should
     be the sum of the two values.
     '''
-    pass
+
+    return dict(Counter(d1) + Counter(d2))
 
 
 def make_char_dict(filename):
@@ -60,7 +70,20 @@ def make_char_dict(filename):
     line number 1.  Characters which never are the first letter of a line do
     not need to be included in your dictionary.
     '''
-    pass
+    d = {}
+    with open(filename) as f:
+        l = 0
+        for line in f:
+            l += 1
+            for char in line:
+                if char in d:
+                    if d[char][-1] != l:
+                        d[char].append(l)
+                else:
+                    d[char] = []
+                    d[char].append(l)
+    return d
+
 
 
 ### Pandas
@@ -77,7 +100,8 @@ def pandas_add_increase_column(df):
     Add a column to the DataFrame called 'Increase' which contains the
     amount that the median rent increased by from 2011 to 2014.
     '''
-    pass
+    df['Increase'] = df['med_2014'].fillna(0) - df['med_2011'].fillna(0)
+    #return df
 
 
 def pandas_only_given_state(df, state):
@@ -89,7 +113,8 @@ def pandas_only_given_state(df, state):
     state. Only include these columns:
         Neighborhood, City, med_2011, med_2014
     '''
-    pass
+    df = df[df['State'] == state][['Neighborhood', 'City', 'med_2011', 'med_2014']]
+    return df
 
 
 def pandas_max_rent(df):
@@ -106,7 +131,10 @@ def pandas_max_rent(df):
     Your DataFrame should contain these columns:
         City, State, med_2011, med_2014
     '''
-    pass
+    df = df[['City', 'State', 'med_2011', 'med_2014']]
+    df = df[['City', 'State', 'med_2011', 'med_2014']].groupby('City')['med_2011', 'med_2014'].max()
+    print(df)
+    return df
 
 ### SQL
 # For each of these, your python function should return a string that is the
@@ -133,7 +161,13 @@ def sql_count_neighborhoods():
     unique unless you include the state as well, so your result should have
     these columns (though you do not need to name them): city, state, cnt
     '''
-    pass
+    q = '''
+    SELECT City,State,count(Neighborhood) AS cnt
+    FROM rent
+    GROUP BY City,State
+    ;
+    '''
+    return q
 
 
 def sql_highest_rent_increase():
@@ -144,7 +178,17 @@ def sql_highest_rent_increase():
     Return a SQL query that gives the 5 San Francisco neighborhoods with the
     highest rent increase.
     '''
-    pass
+
+    q = '''
+    SELECT Neighborhood, (med_2014-med_2011) AS increase
+    FROM rent
+    WHERE City = 'San Francisco'
+    ORDER BY increase DESC
+    LIMIT 5
+    ;
+
+    '''
+    return q
 
 
 def sql_rent_and_buy():
@@ -157,4 +201,14 @@ def sql_rent_and_buy():
     Your result should have these columns (though you do not need to name
     them): neighborhood, rent, buy
     '''
-    pass
+    q = '''
+    SELECT r.Neighborhood, r.med_2014, b.med_2014
+    FROM rent AS r
+    INNER JOIN
+    buy AS b
+    ON (r.Neighborhood = b.Neighborhood AND r.City = b.City AND r.State = b.State)
+    WHERE r.city = 'San Francisco'
+    ;
+
+    '''
+    return q
