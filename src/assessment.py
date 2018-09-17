@@ -131,9 +131,11 @@ def pandas_max_rent(df):
     Your DataFrame should contain these columns:
         City, State, med_2011, med_2014
     '''
-    df = df[['City', 'State', 'med_2011', 'med_2014']]
-    df = df[['City', 'State', 'med_2011', 'med_2014']].groupby('City')['med_2011', 'med_2014'].max()
-    print(df)
+    df1 = df[['City', 'State', 'med_2011']].fillna(0).groupby(['City','State'], as_index=False)['med_2011'].max()
+    df2 = df[['City', 'State', 'med_2014']].fillna(0).groupby(['City','State'], as_index=False)['med_2014'].max()
+
+    #df = df[['City', 'State', 'med_2011', 'med_2014']].groupby('City')['med_2011', 'med_2014'].max()
+    df = pd.merge(df1, df2, on =['City', 'State'])
     return df
 
 ### SQL
