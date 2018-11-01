@@ -72,17 +72,14 @@ def make_char_dict(filename):
     '''
     d = {}
     with open(filename) as f:
-        l = 0
+        l = 1
         for line in f:
+            if line[0].lower() in d:
+                d[line[0].lower()].append(l)
+            else:
+                d[line[0].lower()] = [l]
             l += 1
-            for char in line:
-                if char in d:
-                    if d[char][-1] != l:
-                        d[char].append(l)
-                else:
-                    d[char] = []
-                    d[char].append(l)
-    return d
+    return  d
 
 
 
